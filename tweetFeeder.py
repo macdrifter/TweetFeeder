@@ -16,7 +16,7 @@ api = twitter.Api(consumer_key='gibberish', consumer_secret='moregibberish', acc
 #print api.VerifyCredentials()
 
 #Twitter users with interesting links
-feedList = ['binaryghost', 'viticci', 'marksiegal', 'ttscoff', 'gromble', 'drbunsen', 'waltonjones', 'TJLuoma', 'eddie_smith', 'chewingpencils', 'jeffhunsberger', 'nateboateng']
+feedList = ['binaryghost', 'viticci', 'marksiegal', 'ttscoff', 'gromble', 'drbunsen', 'waltonjones', 'TJLuoma', 'eddie_smith', 'chewingpencils', 'jeffhunsberger', 'nateboateng', 'macdrifter', 'themindfulbit']
 
 # The adventure begins
 for user in feedList:
