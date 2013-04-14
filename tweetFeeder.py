@@ -9,13 +9,13 @@ import gzip
 
 # The Pinboard account credentials to use
 pyAccount = 'aUserAccount'
-pyPass = 'anAwesomePassword'
+pyToken = 'anAwesomeToken'
 
 # The Twitter API Keys. You need your own.
 api = twitter.Api(consumer_key='gibberish', consumer_secret='moregibberish', access_token_key='evenlongergibberish', access_token_secret='thelastbitofgibberish')
 #print api.VerifyCredentials()
 
-#Twitter users with interesting links
+# Twitter users with interesting links
 feedList = ['binaryghost', 'viticci', 'marksiegal', 'ttscoff', 'gromble', 'drbunsen', 'waltonjones', 'TJLuoma', 'eddie_smith', 'chewingpencils', 'jeffhunsberger', 'nateboateng', 'macdrifter', 'themindfulbit']
 
 # The adventure begins
@@ -61,7 +61,7 @@ for user in feedList:
                             # Assemble the bookmark notes. Create Twitter link for RSS viewing
                             bookmarkExtended = '<p>'+user+'</p>\n<p>' + tweetMsg + '</p>\n\n' + '<a href="'+sourceURL+'">Twitter Source</a>'
                             try:
-                                p = pinboard.open(pyAccount, pyPass)
+                                p = pinboard.open(username = pyAccount, token = pyToken)
                                 postResult = p.add(url=fullURL, description=pyTitle, extended=bookmarkExtended, tags= (rssTag))
                             except (RuntimeError, TypeError, NameError):
                                 print RuntimeError
